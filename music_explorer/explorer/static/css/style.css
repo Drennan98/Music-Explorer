@@ -1,0 +1,42 @@
+body {
+    background: #121212;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 30px;
+}
+
+h1 {
+    text-align: center;
+}
+
+input {
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.card {
+    background: #1e1e1e;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+h2 {
+    border-bottom: 1px solid #333;
+    padding-bottom: 5px;
+}
