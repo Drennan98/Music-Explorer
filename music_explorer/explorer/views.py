@@ -5,7 +5,7 @@ from django.http import JsonResponse
 from django.shortcuts import render
 
 # Create your views here.
-def load_music():
+def load_music_data():
     path = os.path.join(
         os.path.dirname(__file__), "data", "data.json"
     )
@@ -34,7 +34,7 @@ def search_music(request):
             })
 
         for album in artist["albums"]:
-            if query in album ['title'].lower():
+            if query in album["title"].lower():
                 albums.append({
                     "artist": artist["name"],
                     "title": album["title"],
@@ -47,11 +47,11 @@ def search_music(request):
                         "artist": artist["name"],
                         "album": album["title"],
                         "title": song["title"],
-                        "duraction": song["duration"]
+                        "length": song["length"]
                     })
 
-        return JsonResponse({
-            "artists": artists,
-            "albums": albums,
-            "songs": songs
-        })
+    return JsonResponse({
+        "artists": artists,
+        "albums": albums,
+        "songs": songs
+    })
