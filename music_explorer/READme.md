@@ -8,3 +8,9 @@
 - Look for the "Music-Explorer" repo and copy the link. 
 
 - Clone the repo in your preferred IDE. You can do this in the command line with "git clone <repo-link>". 
+
+- Run "pip install django" to install Django. 
+
+- Before running the application, run "python manage.py migrate" to create database tables required by Django. 
+
+- Run "python manage.py runserver" to start the application. 
