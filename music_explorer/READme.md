@@ -1,4 +1,5 @@
 # Installation Instructions
+
 - Before running the application, make sure Python 3.10 or higher and Git is installed. 
 
 - Verify Python is installed by running "python --version" in the terminal. 
