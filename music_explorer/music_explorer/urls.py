@@ -18,7 +18,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+# urlpatterns is a list of routes and each route tells Django that when you visit
+# said URL, take them to that part of the app. 
 urlpatterns = [
+    # This sends anything starting with /admin/ to the admin site, and anything starting with / to the explorer app.
     path('admin/', admin.site.urls),
+    # So instead of defining all URL's here we can just include the URL's from the explorer app.
     path('', include('explorer.urls'))
 ]
