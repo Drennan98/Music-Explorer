@@ -19,12 +19,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
+# SECURITY WARNING: keep the secret key used in production secret!\
+# Never upload to GitHub.
 SECRET_KEY = "django-insecure-5!o^hw8h@#1w=alp7!-#29jeu7$5t*%rnl)y5p_)*--0(@08$&"
 
 # SECURITY WARNING: don't run with debug turned on in production!
+# Shows detailed error messages when something goes wrong. 
 DEBUG = True
 
+# An empty list means only local development. 
 ALLOWED_HOSTS = []
 
 
@@ -37,6 +40,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    # My app and logic live here. 
     "explorer",
 ]
 
@@ -50,8 +54,10 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
+# Tells Django where to start looking for URL routes. 
 ROOT_URLCONF = "music_explorer.urls"
 
+# HTML files Django renders for users.
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
@@ -73,6 +79,7 @@ WSGI_APPLICATION = "music_explorer.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
+# Defines where data is stored.
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
@@ -115,8 +122,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
+# URL prefix for static files.
 STATIC_URL = "/static/"
 
+# Extra folders where Django should look for static files.
 STATICFILES_DIRS = [
     BASE_DIR / "static"
 ]
